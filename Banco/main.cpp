@@ -1,40 +1,8 @@
 #include <iostream>
 #include <string>
+#include "Conta.h"
 
 using namespace std;
-
-struct Conta
-{
-	string numero;
-	string cpfTitular;
-	string nomeTitular;
-	float saldo;
-};
-
-void sacar(Conta& conta, float valorASacar)
-{
-	if (valorASacar < 0) {
-		cout << "Não pode sacar valor negativo!" << endl;
-		return;
-	}
-
-	if (valorASacar > conta.saldo) {
-		cout << "Saldo insuficiente!" << endl;
-		return;
-	}
-
-	conta.saldo -= valorASacar;
-}
-
-void depositar(Conta& conta, float valorADepositar)
-{
-	if (valorADepositar < 0) {
-		cout << "Não pode depositar valor negativo!" << endl;
-		return;
-	}
-
-	conta.saldo += valorADepositar;
-}
 
 int main()
 {
@@ -43,7 +11,15 @@ int main()
 	umaConta.numero = "123456";
 	umaConta.cpfTitular = "123.456.789.01";
 	umaConta.nomeTitular = "Bruno";
-	umaConta.saldo = 100;
+	umaConta.saldo = 1000;
+
+	Conta umaOutraConta;
+	umaOutraConta.numero = "789012";
+	umaOutraConta.saldo = 1000;
+	umaOutraConta.sacar(400);
+	umaOutraConta.depositar(100);
+
+	cout << "Saldo de uma conta: " << umaConta.saldo << " | saldo de outra conta: " << umaOutraConta.saldo << endl;
 
 	return 0;
 }
