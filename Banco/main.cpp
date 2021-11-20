@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include "Conta.h"
 
@@ -8,18 +9,16 @@ int main()
 {
 	Conta umaConta;
 
-	umaConta.numero = "123456";
-	umaConta.cpfTitular = "123.456.789.01";
-	umaConta.nomeTitular = "Bruno";
-	umaConta.saldo = 1000;
+	umaConta.depositar(1000);
 
 	Conta umaOutraConta;
-	umaOutraConta.numero = "789012";
-	umaOutraConta.saldo = 1000;
+	umaOutraConta.depositar(1000);
 	umaOutraConta.sacar(400);
-	umaOutraConta.depositar(100);
+	
+	std::cout << std::fixed;
+	std::cout << std::setprecision(2);
 
-	cout << "Saldo de uma conta: " << umaConta.saldo << " | saldo de outra conta: " << umaOutraConta.saldo << endl;
+	cout << "Saldo de uma conta: " << umaConta.getSaldo() << " | saldo de outra conta: " << umaOutraConta.getSaldo() << endl;
 
 	return 0;
 }
