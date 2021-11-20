@@ -27,7 +27,7 @@ void Conta::depositar(float valorADepositar)
 	saldo += valorADepositar;
 }
 
-std::string Conta::getNumero()
+std::string Conta::getNumero() const
 {
 	return numero;
 }
@@ -57,7 +57,7 @@ void Conta::setNomeTitular(std::string nome)
 	nomeTitular = nome;
 }
 
-float Conta::getSaldo()
+float Conta::getSaldo() const
 {
 	return saldo;
 }

@@ -13,11 +13,11 @@ public:
 	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 
-	std::string getNumero();
+	std::string getNumero() const;
 	void setNumero(std::string num);
 	std::string getCpfTitular();
 	void setCpfTitular(std::string cpf);
 	std::string getNomeTItular();
 	void setNomeTitular(std::string nome);
-	float getSaldo();
+	float getSaldo() const;
 };
