@@ -14,10 +14,7 @@ public:
 	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	std::string getNumero() const;
-	void setNumero(std::string numero);
-	std::string getCpfTitular();
-	void setCpfTitular(std::string cpf);
+	std::string getCpfTitular() const;
 	std::string getNomeTitular() const;
-	void setNomeTitular(std::string nome);
 	float getSaldo() const;
 };

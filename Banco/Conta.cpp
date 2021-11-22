@@ -38,29 +38,14 @@ std::string Conta::getNumero() const
 	return numero;
 }
 
-void Conta::setNumero(std::string numero)
-{
-	this->numero = numero;
-}
-
-std::string Conta::getCpfTitular()
+std::string Conta::getCpfTitular() const
 {
 	return cpfTitular;
-}
-
-void Conta::setCpfTitular(std::string cpf)
-{
-	cpfTitular = cpf;
 }
 
 std::string Conta::getNomeTitular() const
 {
 	return nomeTitular;
-}
-
-void Conta::setNomeTitular(std::string nome)
-{
-	nomeTitular = nome;
 }
 
 float Conta::getSaldo() const
