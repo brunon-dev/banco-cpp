@@ -1,6 +1,14 @@
 #include <iostream>
 #include "Conta.h"
 
+Conta::Conta(std::string numero, std::string nomeTitular, std::string cpfTitular)
+{
+	this->numero = numero;
+	this->nomeTitular = nomeTitular;
+	this->cpfTitular = cpfTitular;
+	this->saldo = 0;
+}
+
 void Conta::sacar(float valorASacar)
 {
 
@@ -32,9 +40,9 @@ std::string Conta::getNumero() const
 	return numero;
 }
 
-void Conta::setNumero(std::string num)
+void Conta::setNumero(std::string numero)
 {
-	numero = num;
+	this->numero = numero;
 }
 
 std::string Conta::getCpfTitular()
@@ -47,7 +55,7 @@ void Conta::setCpfTitular(std::string cpf)
 	cpfTitular = cpf;
 }
 
-std::string Conta::getNomeTItular()
+std::string Conta::getNomeTitular() const
 {
 	return nomeTitular;
 }
