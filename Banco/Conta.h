@@ -18,6 +18,7 @@ private:
 
 public:
 	Conta(std::string numero, std::string nomeTitular, std::string cpfTitular);
+	~Conta();
 	void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	std::string getNumero() const;

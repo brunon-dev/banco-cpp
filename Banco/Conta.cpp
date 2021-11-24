@@ -10,6 +10,11 @@ Conta::Conta(std::string numero, std::string nomeTitular, std::string cpfTitular
 	numeroDeContas++;
 }
 
+Conta::~Conta()
+{
+	numeroDeContas--;
+}
+
 int Conta::getNumeroDeContas()
 {
 	return numeroDeContas;
