@@ -1,10 +1,18 @@
 #include <iostream>
 #include "Conta.h"
 
+int Conta::numeroDeContas = 0;
+
 // construtor com initialization list
 Conta::Conta(std::string numero, std::string nomeTitular, std::string cpfTitular)
 			: numero(numero), nomeTitular(nomeTitular), cpfTitular(cpfTitular), saldo(0)
 {
+	numeroDeContas++;
+}
+
+int Conta::getNumeroDeContas()
+{
+	return numeroDeContas;
 }
 
 void Conta::sacar(float valorASacar)

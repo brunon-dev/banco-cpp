@@ -25,5 +25,7 @@ int main()
 	exibeSaldo(umaConta);
 	exibeSaldo(umaOutraConta);
 
+	cout << "Total de contas: " << Conta::getNumeroDeContas() << endl;
+
 	return 0;
 }
