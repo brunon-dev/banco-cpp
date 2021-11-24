@@ -25,4 +25,7 @@ public:
 	std::string getCpfTitular() const;
 	std::string getNomeTitular() const;
 	float getSaldo() const;
+
+private:
+	void verificaTamanhoDoNome();
 };
