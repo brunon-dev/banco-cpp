@@ -1,14 +1,9 @@
 #include "Titular.h"
 #include <iostream>
 
-Titular::Titular(std::string nome, std::string cpf):nome(nome), cpf(cpf)
+Titular::Titular(std::string nome, Cpf cpf):nome(nome), cpf(cpf)
 {
 	verificaTamanhoDoNome();
-}
-
-std::string Titular::getCpf() const
-{
-	return cpf;
 }
 
 std::string Titular::getNome() const

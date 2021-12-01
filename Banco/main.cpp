@@ -13,10 +13,11 @@ void exibeSaldo(const Conta& conta)
 
 int main()
 {
-	Conta umaConta("12345", Titular("Bruno", "123.456.789-01"));
+	Conta umaConta("12345", Titular("Bruno", Cpf("123.456.789-01")));
 	umaConta.depositar(1000);
 
-	Conta umaOutraConta("67890", Titular("Pedro", "234.567.890-12"));
+	// cria o objeto CPF com conversão implícita
+	Conta umaOutraConta("67890", Titular("Pedro", string("234.567.890-12")));
 	umaOutraConta.depositar(1000);
 	umaOutraConta.sacar(400);
 	
