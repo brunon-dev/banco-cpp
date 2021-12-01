@@ -4,10 +4,9 @@
 int Conta::numeroDeContas = 0;
 
 // construtor com initialization list
-Conta::Conta(std::string numero, std::string nomeTitular, std::string cpfTitular)
-			: numero(numero), nomeTitular(nomeTitular), cpfTitular(cpfTitular), saldo(0)
+Conta::Conta(std::string numero, Titular titular)
+			: numero(numero), titular(titular), saldo(0)
 {
-	verificaTamanhoDoNome();
 	numeroDeContas++;
 }
 
@@ -52,25 +51,7 @@ std::string Conta::getNumero() const
 	return numero;
 }
 
-std::string Conta::getCpfTitular() const
-{
-	return cpfTitular;
-}
-
-std::string Conta::getNomeTitular() const
-{
-	return nomeTitular;
-}
-
 float Conta::getSaldo() const
 {
 	return saldo;
-}
-
-void Conta::verificaTamanhoDoNome()
-{
-	if (nomeTitular.size() < 5) {
-		std::cout << "Nome muito curto" << std::endl;
-		exit(1);
-	}
 }
