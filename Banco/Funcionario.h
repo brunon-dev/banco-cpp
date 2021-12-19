@@ -8,4 +8,5 @@ private:
 	float salario;
 public:
 	Funcionario(std::string nome, Cpf cpf, float salario);
+	std::string getNome() const;
 };

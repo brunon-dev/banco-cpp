@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <string>
 #include "Conta.h"
+#include "Funcionario.h"
 
 using namespace std;
 
@@ -28,6 +29,9 @@ int main()
 	exibeSaldo(umaOutraConta);
 
 	cout << "Total de contas: " << Conta::getNumeroDeContas() << endl;
+
+	Funcionario funcionario("Sonia", Cpf("345.678.901-23"), 1000);
+	cout << "Nome do funcionário: " << funcionario.getNome() << endl;
 
 	return 0;
 }

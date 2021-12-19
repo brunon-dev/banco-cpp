@@ -27,7 +27,7 @@
     <ClCompile Include="Cpf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Funcionariocpp.cpp">
+    <ClCompile Include="Funcionario.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Pessoa.cpp">
